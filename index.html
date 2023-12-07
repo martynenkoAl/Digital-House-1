@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Тестовое задание frontend разработчика №1</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Обратная форма</h1>
+      <form action="#" id="form" class="form">
+        <ul class="form__fields">
+          <li class="form__field">
+            <input
+              id="username-input"
+              type="text"
+              name="username"
+              placeholder="ФИО"
+              class="form__input"
+              minlength="2"
+              maxlength="40"
+              required
+            />
+            <label class="form__label" for="username-input">ФИО</label>
+          </li>
+          <li class="form__field">
+            <input
+              id="phone-input"
+              type="tel"
+              name="phone"
+              placeholder="+7 (xxx) xxx-xx-xx"
+              class="form__input"
+              pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+              minlength="18"
+              maxlength="18"
+              required
+            />
+            <label class="form__label" for="phone-input">Телефон</label>
+          </li>
+          <li class="form__field">
+            <input
+              id="email-input"
+              type="email"
+              name="email"
+              placeholder="mail@example.com"
+              class="form__input"
+              pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+            />
+            <label class="form__label" for="email-input">E-mail</label>
+          </li>
+          <li class="form__field form__field_textarea">
+            <textarea
+              class="form__input"
+              name="message"
+              id="message-input"
+              placeholder="Ваше сообщение"
+            ></textarea>
+            <label class="form__label" for="message-input">Сообщение</label>
+          </li>
+        </ul>
+        <p class="form__agree">
+          Отправляя форму, Вы соглашаетесь на
+          <a class="form__link" href="#">обработку персональных данных</a>
+        </p>
+        <button type="submit" aria-label="Отправить" class="form__submit">
+          Отправить
+        </button>
+      </form>
+    </div>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
